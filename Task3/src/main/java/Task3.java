@@ -5,11 +5,11 @@ import java.util.regex.Pattern;
 
 public class Task3 {
 
-    static final int ID_OFFSET = 1;
-    static final int NAME_OFFSET = 4;
-    static final int AGE_OFFSET = 7;
-    static final int CITY_OFFSET = 10;
-    static final int JOB_OFFSET = 13;
+    static final int ID_OFFSET = 0;
+    static final int NAME_OFFSET = 1;
+    static final int AGE_OFFSET = 2;
+    static final int CITY_OFFSET = 3;
+    static final int JOB_OFFSET = 4;
 
     static void class3a() {
         String phones="919191919 929992221 91111111111 239494582 9199999999 967779999";
@@ -47,7 +47,10 @@ public class Task3 {
         ArrayList<String> found = new ArrayList<String>();
         String er = ">[a-zA-Z\\s]*" + search + "[a-zA-Z\\s]*<";
         Pattern p = Pattern.compile(er);
+        String link = "https://eden.dei.uc.pt/~abs/ID/pessoas.html";
+        String searcher ="";
         try {
+            HttpRequestFunctions.httpRequest1(link, searcher, "people.html");
             FileReader reader = new FileReader("people.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line;
@@ -71,7 +74,10 @@ public class Task3 {
         String er2 = ">[A-Z][a-zA-Z]*\\s[A-Z][a-zA-Z]*<";
         Pattern p1 = Pattern.compile(er1, Pattern.DOTALL);
         Pattern p2 = Pattern.compile(er2);
+        String link = "https://eden.dei.uc.pt/~abs/ID/pessoas.html";
+        String searcher ="";
         try {
+            HttpRequestFunctions.httpRequest1(link, searcher, "people.html");
             FileReader reader = new FileReader("people.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             StringBuffer sb = new StringBuffer();
@@ -83,9 +89,7 @@ public class Task3 {
             String[] blocks = sb.toString().split("<tr>");
             for (int i = 2; i < blocks.length; i++) {
                 blocks[i] = blocks[i].trim();
-
-                String[] data = blocks[i].split("\n");
-
+                String[] data = blocks[i].split("/td>");
                 Matcher m1 = p1.matcher(data[CITY_OFFSET]);
                 while(m1.find()) {
                     Matcher m2 = p2.matcher(data[NAME_OFFSET]);
@@ -109,7 +113,10 @@ public class Task3 {
         String er2 = ">[A-Z][a-zA-Z]*\\s[A-Z][a-zA-Z]*<";
         Pattern p1 = Pattern.compile(er1, Pattern.DOTALL);
         Pattern p2 = Pattern.compile(er2);
+        String link = "https://eden.dei.uc.pt/~abs/ID/pessoas.html";
+        String searcher ="";
         try {
+            HttpRequestFunctions.httpRequest1(link, searcher, "people.html");
             FileReader reader = new FileReader("people.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             StringBuffer sb = new StringBuffer();
@@ -122,7 +129,7 @@ public class Task3 {
             for (int i = 2; i < blocks.length; i++) {
                 blocks[i] = blocks[i].trim();
 
-                String[] data = blocks[i].split("\n");
+                String[] data = blocks[i].split("/td>");
 
                 Matcher m1 = p1.matcher(data[JOB_OFFSET]);
                 while(m1.find()) {
@@ -147,7 +154,10 @@ public class Task3 {
         String er2 = ">[A-Z][a-zA-Z]*\\s[A-Z][a-zA-Z]*<";
         Pattern p1 = Pattern.compile(er1, Pattern.DOTALL);
         Pattern p2 = Pattern.compile(er2);
+        String link = "https://eden.dei.uc.pt/~abs/ID/pessoas.html";
+        String searcher ="";
         try {
+            HttpRequestFunctions.httpRequest1(link, searcher, "people.html");
             FileReader reader = new FileReader("people.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             StringBuffer sb = new StringBuffer();
@@ -160,7 +170,7 @@ public class Task3 {
             for (int i = 2; i < blocks.length; i++) {
                 blocks[i] = blocks[i].trim();
 
-                String[] data = blocks[i].split("\n");
+                String[] data = blocks[i].split("/td>");
 
                 Matcher m1 = p1.matcher(data[ID_OFFSET]);
                 while(m1.find()) {
@@ -187,7 +197,10 @@ public class Task3 {
         String er2 = ">[0-9]{1,3}<";
         Pattern p1 = Pattern.compile(er1, Pattern.DOTALL);
         Pattern p2 = Pattern.compile(er2);
+        String link = "https://eden.dei.uc.pt/~abs/ID/pessoas.html";
+        String searcher ="";
         try {
+            HttpRequestFunctions.httpRequest1(link, searcher, "people.html");
             FileReader reader = new FileReader("people.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             StringBuffer sb = new StringBuffer();
@@ -200,7 +213,7 @@ public class Task3 {
             for (int i = 2; i < blocks.length; i++) {
                 blocks[i] = blocks[i].trim();
 
-                String[] data = blocks[i].split("\n");
+                String[] data = blocks[i].split("/td>");
 
                 Matcher m1 = p1.matcher(data[ID_OFFSET]);
                 while(m1.find()) {
@@ -227,7 +240,10 @@ public class Task3 {
         String er2 = ">[A-Z][a-zA-Z\\s,]*<";
         Pattern p1 = Pattern.compile(er1, Pattern.DOTALL);
         Pattern p2 = Pattern.compile(er2);
+        String link = "https://eden.dei.uc.pt/~abs/ID/pessoas.html";
+        String searcher ="";
         try {
+            HttpRequestFunctions.httpRequest1(link, searcher, "people.html");
             FileReader reader = new FileReader("people.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             StringBuffer sb = new StringBuffer();
@@ -240,7 +256,7 @@ public class Task3 {
             for (int i = 2; i < blocks.length; i++) {
                 blocks[i] = blocks[i].trim();
 
-                String[] data = blocks[i].split("\n");
+                String[] data = blocks[i].split("/td>");
 
                 Matcher m1 = p1.matcher(data[ID_OFFSET]);
                 while(m1.find()) {
@@ -267,7 +283,10 @@ public class Task3 {
         String er2 = ">[A-Z][a-zA-Z\\s,]*<";
         Pattern p1 = Pattern.compile(er1, Pattern.DOTALL);
         Pattern p2 = Pattern.compile(er2);
+        String link = "https://eden.dei.uc.pt/~abs/ID/pessoas.html";
+        String searcher ="";
         try {
+            HttpRequestFunctions.httpRequest1(link, searcher, "people.html");
             FileReader reader = new FileReader("people.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             StringBuffer sb = new StringBuffer();
@@ -280,7 +299,7 @@ public class Task3 {
             for (int i = 2; i < blocks.length; i++) {
                 blocks[i] = blocks[i].trim();
 
-                String[] data = blocks[i].split("\n");
+                String[] data = blocks[i].split("/td>");
 
                 Matcher m1 = p1.matcher(data[ID_OFFSET]);
                 while(m1.find()) {

@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<html class="no-js" lang="pt-PT">
+<!--<![endif]-->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta http-equiv="cleartype" content="on">
+
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/icons/bertrand-icon-180x180.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/icons/bertrand-icon-152x152.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/icons/bertrand-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/icons/bertrand-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/icons/bertrand-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/icons/bertrand-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/icons/icons/bertrand-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" href="/assets/icons/bertrand-icon-57x57.png">
+    <link rel="icon" sizes="192x192" href="/assets/icons/bertrand-icon-192x192.png">
+    <link rel="icon" sizes="128x128" href="/assets/icons/bertrand-icon-128x128.png">
+    <link rel="shortcut icon" href="/assets/icons/bertrand-icon-144x144.png">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgEFWFBACQEAUFFQAw==",licenseKey:"ccd6080b38",applicationID:"1204024"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(18),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{p?p-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(19),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(6),t(5),"addEventListener"in window&&t(3),c.xhrWrappable&&t(7),d=!0)}s.on("fn-start",function(t,e,n){d&&(p+=1)}),s.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],4:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return o.emit(n+"start",[t,a],s),s.then(function(t){return o.emit(n+"end",[null,t],s),t},function(t){throw o.emit(n+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(19),a=t(18);e.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(s,"fetch",c),o.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(c+"done",[null,e],n)}else o.emit(c+"done",[t],n)}))},{}],5:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],6:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],7:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(3);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,g="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],8:[function(t,e,n){function r(t){if(!i(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,s=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,n,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var e=!1,n=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,n=!!r.enabled),n)if(t.sameOrigin)e=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return n&&e}var a=t(16),s=t(10);e.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],9:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):i(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime]))}}function o(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=c(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(10),f=t(8).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(14),m=t(13),v=t(11),g=window.XMLHttpRequest;a.features.xhr=!0,t(7),t(4),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){i(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);n&&n.header&&(e.setRequestHeader("newrelic",n.header),this.dt=n)}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=m(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<l;s++)e.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof g&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){var e,n=t[1]||{};"string"==typeof t[0]?e=t[0]:t[0]&&t[0].url&&(e=t[0].url),e&&(this.parsedOrigin=c(e),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=f(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in n)i[a]=n[a];i.headers=new Headers(n.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],10:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],11:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?o(t.response):"text"===n||"document"===n||""===n||void 0===n?o(t.responseText):void 0}var o=t(13);e.exports=r},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(18),s=t(19),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=o(l+e,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(p+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?c("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&c("timing",["fcp",Math.floor(t.startTime)])})}function o(t,e){var n=t.getEntries();n.length>0&&c("lcp",[n[n.length-1]])}function i(t){if(t instanceof u&&!l){var e,n=Math.round(t.timeStamp);e=n>1e12?Date.now()-n:f.now()-n,l=!0,c("timing",["fi",n,{type:t.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,s,c=t("handle"),f=t("loader"),u=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),s=new PerformanceObserver(o);try{a.observe({entryTypes:["paint"]}),s.observe({entryTypes:["largest-contentful-paint"]})}catch(d){}}if("addEventListener"in document){var l=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(t){document.addEventListener(t,i,!1)})}}},{}],16:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(e=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}e.exports={generateUuid:r,generateCatId:o}},{}],17:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],18:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],19:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],20:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function n(n,r,o,i){if(!l.aborted||i){t&&t(n,r,o);for(var a=e(o),s=m(n),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[n]];return d&&d.push([x,n,r,a]),a}}function p(t,e){w[t]=m(t).concat(e)}function h(t,e){var n=w[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return w[t]||[]}function v(t){return d[t]=d[t]||o(n)}function g(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var w={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:g,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(18),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()+b.offset],null,"api");var n=p.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(18),u=t("ee"),d=t(17),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},x=v&&g&&g[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:s,now:a,origin:w,features:{},xhrWrappable:x,userAgent:d};t(12),t(15),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(20)},{}],"wrap-function":[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(19),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],s])}u(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],s),d}finally{u(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<e.length;c++)s=e[c],a=t[s],r(a)||(t[s]=n(a,f?s+o:o,i,s))}function u(n,r,o){if(!c||e){var i=c;c=!0;try{t.emit(n,r,o,e)}catch(a){l([a,n,r,o])}c=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}]},{},["loader",2,9]);</script>
+
+    <title>Bertrand Livreiros - livraria Online</title>
+<meta name="description" content="A Bertrand é a maior rede de livrarias de Portugal. De norte a sul do país, procuramos estar sempre perto de si.
+Na Bertrand online, para além de todos os livros portugueses, encontra edições estrangeiras e eBooks." /><link rel="canonical" href="https://www.bertrand.pt" /><meta property="og:url" content="https://www.bertrand.pt" /><meta property="og:title" content="Bertrand Livreiros - livraria Online" /><meta property="og:image" content="https://www.bertrand.pt/img/bertrand_social.png" /><meta property="og:description" content="A Bertrand é a maior rede de livrarias de Portugal. De norte a sul do país, procuramos estar sempre perto de si.
+Na Bertrand online, para além de todos os livros portugueses, encontra edições estrangeiras e eBooks." />    <!-- Add to homescreen  -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Bertrand">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.bertrand.pt/build/typography.min.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.bertrand.pt/build/358-vendor.min.css" />
+<link rel="stylesheet" type="text/css" href="//cdn.bertrand.pt/build/358.min.css" />
+        <script>
+            window.dataLayer = window.dataLayer || [];
+        </script>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=wDeTKo0w7BxM3laL72hZQg&gtm_preview=env-2&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-56KQCPW');</script>
+<!-- End Google Tag Manager -->
+<meta name="google-site-verification" content="Vmo3uBmZNbw9DWwnG3_d-jg59VgXIDIeJKYQUPZd1QQ" /></head>
+
+<body id="wrapper" class="search">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56KQCPW&gtm_auth=wDeTKo0w7BxM3laL72hZQg&gtm_preview=env-2&gtm_cookies_win=x"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <header>
+        <nav>
+            <input type="radio" name="toggle" id="sidebar-toggle" class="hidden">
+<input type="radio" name="toggle" id="customer-toggle" class="hidden">
+<input type="radio" name="toggle" id="help-toggle" class="hidden">
+<input type="radio" name="toggle" id="shoppingcart-toggle" class="hidden"  >
+
+<div id="header-navbar" class="login navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+            <label for="sidebar-toggle" class="navbar-toggle menu-btn pull-left hidden-md hidden-lg">
+            <span class="icon-after icon-menu"></span>
+        </label>
+    
+    <div class="brand pull-left">
+        <a class="navbar-brand" href="/">
+            <img class="brand-logo" src="/img/brand.svg" alt="Bertrand">
+        </a>
+    </div>
+    <div class="search-slide pull-left">
+        <div id="auto-complete" class="search-auto-complete hidden">
+            <div id="result-auto-complete" class="col-lg-12"></div>
+        </div>
+        <div class="search-box">
+            <input value="" type="text" name="palavra" id="form-searchform-palavra" placeholder="Pesquisar" />
+            <button type="button" class="button-start-search pull-right">
+                <span class="icon icon-search"></span>
+            </button>
+        </div>
+        <div class="alpha-overlay"></div>
+    </div>
+
+    <a href="/Listacompras" class="navbar-toggle button-list-top pull-right visible-md visible-lg" title="As suas listas de desejos">
+        <!-- <span class="badge" id="badge-list" ></span> -->
+        <span class="icon icon-shopping-list"></span>
+        <span>Listas</span>
+    </a>
+
+    <label for="shoppingcart-toggle" class="navbar-toggle button-cart-top pull-right">
+        <span class="badge" id="badge-shoppingCart" ></span>
+        <span class="icon icon-shopping-cart"></span>
+        <span class="visible-md visible-lg">Cesto</span>
+    </label>
+    
+
+    <a href="/livrarias" class="navbar-toggle button-stores pull-right" title="As nossas livrarias">
+        <span class="icon icon-stores"></span>
+        <span class="visible-md visible-lg">Livrarias</span>
+    </a>
+
+    <a href="/ajuda" data-target="help-toggle" class="navbar-toggle button-help pull-right visible-md visible-lg" title="Ajuda">
+        <span class="icon icon-help"></span>
+        <span>Ajuda</span>
+    </a>
+
+    <label for="customer-toggle" class="navbar-toggle button-customer pull-right">
+        <span class="icon icon-customer"></span>
+        <span class="visible-md visible-lg">Cliente</span>
+    </label>
+
+    <!-- sidebar-wrapper -->
+<div id="sidebar-wrapper">
+<label for="sidebar-toggle" class="hidden-md hidden-lg sidebar-toggle-title navbar">
+    <span class="text">Menu</span>
+    <span class="icon-close pull-right">×</span>
+</label>
+<nav class="lateral-menu">
+    <ul class='nav nav-stacked' id='thematic-tree'><li class='panel'><a class=''  aria-expanded="true" data-norma='8066' data-toggle='collapse' data-parent='#thematic-tree' data-target='#collapse-8066'><span>Livros</span></a><ul class='collapse in panel-collapse' id='collapse-8066'><li class='panel'><a class='' href="/arvoretematica/livros-em-portugues/8066x5839/P" aria-expanded="false" data-norma='8066x5839' data-toggle='collapse' data-parent='#collapse-8066' data-target='#collapse-5839'><span>em Português</span></a><ul class='collapse  panel-collapse' id='collapse-5839'></ul></li><li class='panel'><a class='' href="/arvoretematica/livros-em-ingles/8066x8067/P" aria-expanded="false" data-norma='8066x8067' data-toggle='collapse' data-parent='#collapse-8066' data-target='#collapse-8067'><span>em Inglês</span></a><ul class='collapse  panel-collapse' id='collapse-8067'></ul></li><li class='panel'><a class='' href="/arvoretematica/livros-em-espanhol/8066x8477/P" aria-expanded="false" data-norma='8066x8477' data-toggle='collapse' data-parent='#collapse-8066' data-target='#collapse-8477'><span>em Espanhol</span></a><ul class='collapse  panel-collapse' id='collapse-8477'></ul></li><li class='panel'><a class='' href="/arvoretematica/livros-em-frances/8066x9482/P" aria-expanded="false" data-norma='8066x9482' data-toggle='collapse' data-parent='#collapse-8066' data-target='#collapse-9482'><span>em Francês</span></a><ul class='collapse  panel-collapse' id='collapse-9482'></ul></li></ul></li><li class='panel'><a class=''  aria-expanded="false" data-norma='11708' data-toggle='collapse' data-parent='#thematic-tree' data-target='#collapse-11708'><span>eBooks</span></a><ul class='collapse  panel-collapse' id='collapse-11708'><li class='panel'><a class='' href="/arvoretematica/ebooks-em-portugues/11708x11709/P" aria-expanded="false" data-norma='11708x11709' data-toggle='collapse' data-parent='#collapse-11708' data-target='#collapse-11709'><span>em Português</span></a><ul class='collapse  panel-collapse' id='collapse-11709'></ul></li><li class='panel'><a class='' href="/arvoretematica/ebooks-em-ingles/11708x11710/P" aria-expanded="false" data-norma='11708x11710' data-toggle='collapse' data-parent='#collapse-11708' data-target='#collapse-11710'><span>em Inglês</span></a><ul class='collapse  panel-collapse' id='collapse-11710'></ul></li><li class='panel'><a class='' href="/arvoretematica/ebooks-em-espanhol/11708x21209/P" aria-expanded="false" data-norma='11708x21209' data-toggle='collapse' data-parent='#collapse-11708' data-target='#collapse-21209'><span>em Espanhol</span></a><ul class='collapse  panel-collapse' id='collapse-21209'></ul></li></ul></li><li class='panel'><a class='' href="/livros-escolares" aria-expanded="false" data-norma='8070x5493' data-toggle='collapse' data-parent='#thematic-tree' data-target='#collapse-5493'><span>Livros Escolares</span></a><ul class='collapse  panel-collapse' id='collapse-5493'></ul></li><li class='panel'><a class='' href="/arvoretematica/apoio-escolar/8070x5817/P" aria-expanded="false" data-norma='8070x5817' data-toggle='collapse' data-parent='#thematic-tree' data-target='#collapse-5817'><span>Apoio Escolar</span></a><ul class='collapse  panel-collapse' id='collapse-5817'></ul></li></ul>    
+    <ul class="menu-links">
+                        <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                            <a class="option-link" href="/template/reserva-de-livros">
+                                                <img src="/img/n_ico_reservalivros.svg" alt="">
+                                                <p class="option-label with-img">Reserva de livros</p>
+                                            </a>
+                                    </li>
+                                <li class="border-top-separator"><div></div></li>
+                                <li class="option ">
+                                            <a class="option-link" href="https://www.bertrand.pt/template/esteja-presente">
+                                                <img src="/img/icon-lateral-esteja-presente.svg" alt="">
+                                                <p class="option-label with-img">Esteja Presente</p>
+                                            </a>
+                                    </li>
+                                <li class="border-top-separator"><div></div></li>
+                                <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                            <a class="option-link" href="https://www.bertrand.pt/template/premio-livro-do-ano-bertrand">
+                                                <img src="/img/n_icon_premio2.svg" alt="">
+                                                <p class="option-label with-img">Prémio Livro do Ano</p>
+                                            </a>
+                                    </li>
+                            <li class="option ">
+                                            <a class="option-link" href="/template/clube-infantil">
+                                                <img src="/img/icon-clube-v2_1.svg" alt="">
+                                                <p class="option-label with-img">Clube Bertrand Infantil</p>
+                                            </a>
+                                    </li>
+                                <li class="border-top-separator"><div></div></li>
+                                <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                            <a class="option-link" href="https://www.bertrand.pt/blogue-somos-livros">
+                                                <img src="/img/n_ico_somoslivros.svg" alt="">
+                                                <p class="option-label with-img">Blogue</p>
+                                            </a>
+                                    </li>
+                                <li class="border-top-separator"><div></div></li>
+                                <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                            <a class="option-link" href="/template/afiliados">
+                                                <img src="/img/icones_afiliados-07_fundo_laranja-01.svg" alt="">
+                                                <p class="option-label with-img">Afiliados</p>
+                                            </a>
+                                    </li>
+                                <li class="border-top-separator"><div></div></li>
+                                <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                            <a class="option-link" href="/comunidade-bertrand">
+                                                <img src="/img/icon_comunidade_mini_baner_fundolaranja.svg" alt="">
+                                                <p class="option-label with-img">Comunidade Bertrand</p>
+                                            </a>
+                                    </li>
+                                <li class="border-top-separator"><div></div></li>
+                                <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                            <a class="option-link" href="/template/livrolicos-artigos-bertrand">
+                                                <img src="/img/n_icon_livrolicos2.svg" alt="">
+                                                <p class="option-label with-img">Livrólicos</p>
+                                            </a>
+                                    </li>
+                                <li class="border-top-separator"><div></div></li>
+                                <li class="option ">
+                                            <a class="option-link" href="/template/levantamento-em-livraria">
+                                                <img src="/img/n_ico_entregalivrarias.svg" alt="">
+                                                <p class="option-label with-img">Levantamento em livraria</p>
+                                            </a>
+                                    </li>
+                                <li class="border-top-separator"><div></div></li>
+                                <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                            <a class="option-link" href="/template/cartao-leitor-bertrand">
+                                                <img src="/img/n_ico_cartaobertrand.svg" alt="">
+                                                <p class="option-label with-img">Cartão Leitor Bertrand</p>
+                                            </a>
+                                    </li>
+                                <li class="border-top-separator"><div></div></li>
+                                <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                            <a class="option-link" href="/template/lista-de-desejos">
+                                                <img src="/img/n_icon_listadedesejos3.svg" alt="">
+                                                <p class="option-label with-img">Listas de desejos</p>
+                                            </a>
+                                    </li>
+                                <li class="border-top-separator"><div></div></li>
+                                <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                            <a class="option-link" href="/template/somos-livros">
+                                                <img src="/img/ico_somoslivros2.svg" alt="">
+                                                <p class="option-label with-img">Somos Livros</p>
+                                            </a>
+                                    </li>
+                                <li class="border-top-separator"><div></div></li>
+                                <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                            <a class="option-link" href="/livrarias">
+                                                <img src="/img/n_ico_asnossaslivrarias.svg" alt="">
+                                                <p class="option-label with-img">As nossas livrarias</p>
+                                            </a>
+                                    </li>
+                            <li class="option ">
+                                            <a class="option-link" href="http://www.grupobertrandcirculo.pt/recrutamento/">
+                                                <img src="/img/n_ico_venhatrabalharconnosco.svg" alt="">
+                                                <p class="option-label with-img">Trabalhar connosco</p>
+                                            </a>
+                                    </li>
+                            <li class="option ">
+                                            <a class="option-link" href="https://www.bertrand.pt/eventos">
+                                                <img src="/img/n_ico_eventos.svg" alt="">
+                                                <p class="option-label with-img">Eventos</p>
+                                            </a>
+                                    </li>
+                                <li class="border-top-separator"><div></div></li>
+                                <li class="option ">
+                                            <a class="option-link" href="/template/vouchers-manuais-gratuitos">
+                                                <img src="/img/cores_mega_logo-01-01-01.svg" alt="">
+                                                <p class="option-label with-img">Manuais Escolares Gratuitos</p>
+                                            </a>
+                                    </li>
+                </ul>
+
+</nav>
+</div>
+
+<!-- /#sidebar-wrapper -->
+    <div id="sidebar-shopping-cart-wrapper" class="empty-cart">
+<label for="shoppingcart-toggle" class="hidden-md hidden-lg shopping-cart-toggle-title navbar">
+    <span class="icon icon-shopping-cart pull-left"></span>
+    <span class="text">Cesto de compras</span>
+    <span class="icon-close pull-right">×</span>
+</label>
+<div class="shopping-cart-user option on-logout">Olá, <span class="user-name"></span></div>
+<div class="shopping-cart-user-card option on-logout">
+    <span class="icon-before shopping-cart-user-card-desc">Saldo Disponível</span>
+    <span class="shopping-cart-user-card-value"></span>
+</div>
+<nav class="shopping-cart">
+    <div class="cartoverlay"></div>
+
+    <ul class="row products" id="cestoProdutos"></ul>
+
+    <div class="shop-info">
+        <div class="shop-info-child">
+            <div class="total row">
+                <div class="col-xs-12 total">
+                    <span class="description"></span>
+                    <span class="value"></span>
+                </div>
+                <div class="col-xs-12 shipping">
+                    <span class="description poupanca">Poupança</span>
+                    <span class="value"></span>
+                </div>
+            </div>
+            <div class="sales-infos"></div>
+            <button class="col-xs-12 btn-checkout" onclick="pt.ecommerce.checkout.goToStep(0);">
+                <span class="col-xs-12 info">Checkout</span>
+            </button>
+
+            <div class="col-xs-12 checkout-express hidden">
+                <!--button class="col-xs-12 visible-xs hidden-sm btn-checkout-express-xs">
+                    <span class="col-xs-12 info">Checkout Expresso<br> <b>(dados habituais)</b> </span>
+                </button-->                        
+                <div class="col-xs-12 data">
+                    <button class="col-xs-12 btn-checkout-express">
+                        <span class="col-xs-12 info">Checkout Expresso</span>
+                    </button>
+
+                    <div class="col-xs-12 no-padding collapsed icon" data-target="#checkout-expresso-info-data" data-toggle="collapse">
+                        Ver os meus dados habituais
+                    </div>
+                    <div id="checkout-expresso-info-data" class="collapse col-xs-12 no-padding">
+                        <div class="col-xs-12 ">Avance para a confirmação da encomenda com os dados habituais</div>
+                        <span id="checkExpr-billAddr" class="col-xs-12 ">Dados de faturação: <span class="info"></span></span>
+                        <span id="checkExpr-shipAddr" class="col-xs-12 ">Morada entrega: <span class="info"></span></span>
+                        <span id="checkExpr-shipOpt" class="col-xs-12 ">Forma de envio: <span class="info"></span></span>
+                        <span id="checkExpr-PayOpt" class="col-xs-12 ">Meio de pagamento: <span class="info"></span></span>
+                        <span id="checkExpr-editOptions" class="col-xs-12 no-padding"><a href="/areacliente/checkoutexpresso">Editar os meus dados</a></span>
+                        <span class="col-xs-12 checkout-express-info">
+                            <span class="text-info">
+                                <span class="icon-info">i</span>
+                                <span class="text">Sobre o Checkout Expresso</span>                                        
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-12 checkout-express notlogged hidden">
+                <button class="col-xs-12 btn-checkout-express-xs">
+                    <span class="col-xs-12 info">Checkout Expresso</span>
+                </button>  
+                <div class="col-xs-12 hidden-xs visible-sm visible-md visible-lg data">                        
+                    <span class="col-xs-12 checkout-express-info">
+                        <span class="text-info">
+                            <span class="icon-info">i</span>
+                            <span class="text">Sobre o Checkout Expresso</span>                                        
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class="col-xs-12 no-checkout-express hidden">
+                <a href="/areacliente/checkoutexpresso">O meu checkout expresso</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="empty-info">O cesto de compras está vazio.</div>
+</nav>
+</div>
+
+    
+<div id="sidebar-help-menu-wrapper">
+    <label for="help-toggle" class="hidden-md hidden-lg help-menu-toggle-title navbar">
+        <span class="icon icon-help pull-left"></span>
+        <span class="text">Ajuda</span>
+        <span class="icon-close pull-right">×</span>
+    </label>
+    <nav class="help-menu">
+        <ul>
+                                <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                                    <a class="option-link" href="/ajuda/livraria-online/">
+                                                    <p class="option-label ">LIVRARIA ONLINE</p>
+                                                    </a>
+                                            </li>
+                                    <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                                    <a class="option-link" href="/ajuda/livrarias/">
+                                                    <p class="option-label ">LIVRARIAS</p>
+                                                    </a>
+                                            </li>
+                                    <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                                    <a class="option-link" href="/ajuda/livros-escolares/">
+                                                    <p class="option-label ">LIVROS ESCOLARES</p>
+                                                    </a>
+                                            </li>
+                                    <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                                    <a class="option-link" href="/ajuda/manuais-escolares-gratuitos/">
+                                                    <p class="option-label ">MANUAIS ESCOLARES GRATUITOS</p>
+                                                    </a>
+                                            </li>
+                                    <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                                    <a class="option-link" href="/ajuda/afiliados/">
+                                                    <p class="option-label ">AFILIADOS</p>
+                                                    </a>
+                                            </li>
+                        </ul>
+    </nav>
+</div>
+    <div id="sidebar-customer-menu-wrapper">
+<label for="customer-toggle" class="hidden-md hidden-lg customer-menu-toggle-title navbar">
+    <span class="icon icon-customer pull-left"></span>
+    <span class="text">Cliente</span>
+    <span class="icon-close pull-right">×</span>
+</label>
+<div class="customer-menu-user visible-md visible-lg option on-logout">Olá, <span class="user-name"></span></div>
+<nav class="customer-menu">
+    <ul>
+                        <li class="option visible-xs visible-sm visible-md visible-lg on-login ">
+                                            <a class="option-link" href="/login">
+                                                <img src="/img/n_ico_login.svg" alt="">
+                                                <p class="option-label with-img"><strong>LOGIN</strong></p>
+                                            </a>
+                                    </li>
+                            <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                            <a class="option-link" href="/areacliente">
+                                            <p class="option-label ">ÁREA DE CLIENTE</p>
+                                            </a>
+                                    </li>
+                            <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                            <a class="option-link" href="/Listacompras">
+                                            <p class="option-label ">LISTA DE DESEJOS</p>
+                                            </a>
+                                    </li>
+                            <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                            <a class="option-link" href="/ajuda">
+                                            <p class="option-label ">AJUDA</p>
+                                            </a>
+                                    </li>
+                            <li class="option visible-xs visible-sm visible-md visible-lg on-login ">
+                                            <a class="option-link" href="/login">
+                                            <p class="option-label ">NOVO REGISTO</p>
+                                            </a>
+                                    </li>
+                            <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                            <a class="option-link" href="/areacliente/dadospessoais">
+                                            <p class="option-label ">DADOS PESSOAIS</p>
+                                            </a>
+                                    </li>
+                            <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                            <a class="option-link" href="/areacliente/index/encomendas">
+                                            <p class="option-label ">ENCOMENDAS</p>
+                                            </a>
+                                    </li>
+                            <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                            <a class="option-link" href="/devolucoes">
+                                            <p class="option-label ">TROCAS E DEVOLUÇÕES</p>
+                                            </a>
+                                    </li>
+                            <li class="option visible-xs visible-sm visible-md visible-lg on-login on-logout ">
+                                            <a class="option-link" href="/areacliente/leitorbertrand">
+                                            <p class="option-label ">CARTÃO LEITOR BERTRAND</p>
+                                            </a>
+                                    </li>
+                            <li class="option ">
+                                            <a class="option-link" href="/areacliente/listavales">
+                                            <p class="option-label ">VALES DE COMPRA</p>
+                                            </a>
+                                    </li>
+                            <li class="option visible-xs visible-sm visible-md visible-lg on-logout ">
+                                            <a class="option-link" href="/login/logout">
+                                                <img src="/img/n_ico_logout.svg" alt="">
+                                                <p class="option-label with-img"><strong>LOGOUT</strong></p>
+                                            </a>
+                                    </li>
+                </ul>
+</nav>
+</div>
+    <div class="alpha-overlay"></div>
+
+</div>
+        </nav>
+    </header>
+
+    
+    <main id="page-content-wrapper" class="">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    
+<div class="row site-content search-results products" id="search-page">
+    
+    <div class="tabs col-xs-12"></div>
+    <span class="clearfix"></span>
+   
+           <div class="col-xs-12 search-results-label margin-top"><h1>429 resultados para “J._K._Rowling”</h1></div>
+            <span clas="clearfix"></span>
+    <div class="col-xs-12 search-results-options">
+
+    <div class="row btns-filter" id="">
+            </div>
+
+    
+        <h2 class="col-xs-12 filter not-loaded-filters" id="filters-filter">
+            <span class="loader-filters hidden"></span>
+            <p>Filtrar por</p>
+        </h2>
+        <h2 class="col-xs-12 order not-loaded-filters" id="filters-order">
+            <span class="loader-filters hidden"></span>
+            <p>Ordenar por</p> 
+        </h2>
+
+    
+</div>
+
+<div class="col-xs-12 search-products">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-46725"
+             data-product-id="46725"
+             data-product-name="Harry Potter e a Pedra Filosofal"
+             data-product-position="1"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/harry-potter-e-a-pedra-filosofal-j-k-rowling/46725">
+                
+                    <img alt="Harry Potter e a Pedra Filosofal" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/harry-potter-e-a-pedra-filosofal-j-k-rowling/NDV8NDY3MjV8NzY3OTJ8MTQyMDc2MTYwMDAwMA==/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Harry Potter e a Pedra Filosofal" data-product-id="46725" data-price="15.90" data-brand="Editorial Presença" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="76792" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="76792" data-ficha="S" data-mesart="46725" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--46725">
+        <p>
+            <a class="title-lnk track" href="/livro/harry-potter-e-a-pedra-filosofal-j-k-rowling/46725">Harry Potter e a Pedra Filosofal</a>
+        </p>
+    </div>
+
+    </div> <div class="subtitle">
+    <div class="subtitle-product portlet-product-subtitle--46725">
+        <p>Nº.1</p>
+    </div>
+
+</div>                 <div class="authors portlet-product-author-46725">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="rating">
+                    <a class="title-lnk track" title="Avaliação e comentários" href="/livro/harry-potter-e-a-pedra-filosofal-j-k-rowling/46725">
+                        <div class="stars pull-left">
+                            <span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span>                        </div>
+                        <div class="comments-nr pull-left">(21)</div>
+                        <span class="clearfix"></span>
+                    </a>
+                </div>
+                            <div class="publisher portlet-product-publisher-46725">Editorial Presença</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">15,90€</span>
+                        </div>
+
+            </div>        </div>    
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-46758"
+             data-product-id="46758"
+             data-product-name="Harry Potter e a Câmara dos Segredos"
+             data-product-position="2"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/harry-potter-e-a-camara-dos-segredos-j-k-rowling/46758">
+                
+                    <img alt="Harry Potter e a Câmara dos Segredos" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/harry-potter-e-a-camara-dos-segredos-j-k-rowling/NDV8NDY3NTh8NzY4MjV8MTQyMDc2MTYwMDAwMA==/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Harry Potter e a Câmara dos Segredos" data-product-id="46758" data-price="15.90" data-brand="Editorial Presença" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="76825" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="76825" data-ficha="S" data-mesart="46758" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--46758">
+        <p>
+            <a class="title-lnk track" href="/livro/harry-potter-e-a-camara-dos-segredos-j-k-rowling/46758">Harry Potter e a Câmara dos Segredos</a>
+        </p>
+    </div>
+
+    </div> <div class="subtitle">
+    <div class="subtitle-product portlet-product-subtitle--46758">
+        <p>Nº.2</p>
+    </div>
+
+</div>                 <div class="authors portlet-product-author-46758">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="rating">
+                    <a class="title-lnk track" title="Avaliação e comentários" href="/livro/harry-potter-e-a-camara-dos-segredos-j-k-rowling/46758">
+                        <div class="stars pull-left">
+                            <span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span>                        </div>
+                        <div class="comments-nr pull-left">(12)</div>
+                        <span class="clearfix"></span>
+                    </a>
+                </div>
+                            <div class="publisher portlet-product-publisher-46758">Editorial Presença</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">15,90€</span>
+                        </div>
+
+            </div>        </div>    
+        <span class="clearfix hidden-xs"></span>        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-46787"
+             data-product-id="46787"
+             data-product-name="Harry Potter e o Prisioneiro de Azkaban"
+             data-product-position="3"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/harry-potter-e-o-prisioneiro-de-azkaban-j-k-rowling/46787">
+                
+                    <img alt="Harry Potter e o Prisioneiro de Azkaban" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/harry-potter-e-o-prisioneiro-de-azkaban-j-k-rowling/NDV8NDY3ODd8NzY4NTR8MTQyMDc2MTYwMDAwMA==/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Harry Potter e o Prisioneiro de Azkaban" data-product-id="46787" data-price="16.90" data-brand="Editorial Presença" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="76854" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="76854" data-ficha="S" data-mesart="46787" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--46787">
+        <p>
+            <a class="title-lnk track" href="/livro/harry-potter-e-o-prisioneiro-de-azkaban-j-k-rowling/46787">Harry Potter e o Prisioneiro de Azkaban</a>
+        </p>
+    </div>
+
+    </div> <div class="subtitle">
+    <div class="subtitle-product portlet-product-subtitle--46787">
+        <p>Nº.3</p>
+    </div>
+
+</div>                 <div class="authors portlet-product-author-46787">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="rating">
+                    <a class="title-lnk track" title="Avaliação e comentários" href="/livro/harry-potter-e-o-prisioneiro-de-azkaban-j-k-rowling/46787">
+                        <div class="stars pull-left">
+                            <span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span>                        </div>
+                        <div class="comments-nr pull-left">(13)</div>
+                        <span class="clearfix"></span>
+                    </a>
+                </div>
+                            <div class="publisher portlet-product-publisher-46787">Editorial Presença</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">16,90€</span>
+                        </div>
+
+            </div>        </div>    
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-45362"
+             data-product-id="45362"
+             data-product-name="Harry Potter e a Ordem da Fénix"
+             data-product-position="4"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/harry-potter-e-a-ordem-da-fenix-j-k-rowling/45362">
+                
+                    <img alt="Harry Potter e a Ordem da Fénix" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/harry-potter-e-a-ordem-da-fenix-j-k-rowling/NDV8NDUzNjJ8NzU0Mjl8MTQxNDM2ODAwMDAwMA==/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Harry Potter e a Ordem da Fénix" data-product-id="45362" data-price="21.90" data-brand="Editorial Presença" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="75429" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="75429" data-ficha="S" data-mesart="45362" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--45362">
+        <p>
+            <a class="title-lnk track" href="/livro/harry-potter-e-a-ordem-da-fenix-j-k-rowling/45362">Harry Potter e a Ordem da Fénix</a>
+        </p>
+    </div>
+
+    </div> <div class="subtitle">
+    <div class="subtitle-product portlet-product-subtitle--45362">
+        <p>Nº.5</p>
+    </div>
+
+</div>                 <div class="authors portlet-product-author-45362">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="rating">
+                    <a class="title-lnk track" title="Avaliação e comentários" href="/livro/harry-potter-e-a-ordem-da-fenix-j-k-rowling/45362">
+                        <div class="stars pull-left">
+                            <span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span>                        </div>
+                        <div class="comments-nr pull-left">(12)</div>
+                        <span class="clearfix"></span>
+                    </a>
+                </div>
+                            <div class="publisher portlet-product-publisher-45362">Editorial Presença</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">21,90€</span>
+                        </div>
+
+            </div>        </div>    
+        <span class="clearfix hidden-xs"></span>        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-46865"
+             data-product-id="46865"
+             data-product-name="Harry Potter e o Cálice de Fogo"
+             data-product-position="5"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/harry-potter-e-o-calice-de-fogo-j-k-rowling/46865">
+                
+                    <img alt="Harry Potter e o Cálice de Fogo" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/harry-potter-e-o-calice-de-fogo-j-k-rowling/NDV8NDY4NjV8NzY5MzJ8MTQyMDc2MTYwMDAwMA==/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Harry Potter e o Cálice de Fogo" data-product-id="46865" data-price="19.90" data-brand="Editorial Presença" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="76932" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="76932" data-ficha="S" data-mesart="46865" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--46865">
+        <p>
+            <a class="title-lnk track" href="/livro/harry-potter-e-o-calice-de-fogo-j-k-rowling/46865">Harry Potter e o Cálice de Fogo</a>
+        </p>
+    </div>
+
+    </div> <div class="subtitle">
+    <div class="subtitle-product portlet-product-subtitle--46865">
+        <p>Nº.4</p>
+    </div>
+
+</div>                 <div class="authors portlet-product-author-46865">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="rating">
+                    <a class="title-lnk track" title="Avaliação e comentários" href="/livro/harry-potter-e-o-calice-de-fogo-j-k-rowling/46865">
+                        <div class="stars pull-left">
+                            <span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span>                        </div>
+                        <div class="comments-nr pull-left">(13)</div>
+                        <span class="clearfix"></span>
+                    </a>
+                </div>
+                            <div class="publisher portlet-product-publisher-46865">Editorial Presença</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">19,90€</span>
+                        </div>
+
+            </div>        </div>    
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-170950"
+             data-product-id="170950"
+             data-product-name="Harry Potter e o Príncipe Misterioso"
+             data-product-position="6"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/harry-potter-e-o-principe-misterioso-j-k-rowling/170950">
+                
+                    <img alt="Harry Potter e o Príncipe Misterioso" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/harry-potter-e-o-principe-misterioso-j-k-rowling/NDV8MTcwOTUwfDIxODQ2NHwxNDE0MzY4MDAwMDAw/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Harry Potter e o Príncipe Misterioso" data-product-id="170950" data-price="19.90" data-brand="Editorial Presença" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="218464" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="218464" data-ficha="S" data-mesart="170950" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--170950">
+        <p>
+            <a class="title-lnk track" href="/livro/harry-potter-e-o-principe-misterioso-j-k-rowling/170950">Harry Potter e o Príncipe Misterioso</a>
+        </p>
+    </div>
+
+    </div> <div class="subtitle">
+    <div class="subtitle-product portlet-product-subtitle--170950">
+        <p>Nº.6</p>
+    </div>
+
+</div>                 <div class="authors portlet-product-author-170950">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="rating">
+                    <a class="title-lnk track" title="Avaliação e comentários" href="/livro/harry-potter-e-o-principe-misterioso-j-k-rowling/170950">
+                        <div class="stars pull-left">
+                            <span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span>                        </div>
+                        <div class="comments-nr pull-left">(10)</div>
+                        <span class="clearfix"></span>
+                    </a>
+                </div>
+                            <div class="publisher portlet-product-publisher-170950">Editorial Presença</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">19,90€</span>
+                        </div>
+
+            </div>        </div>    
+        <span class="clearfix hidden-xs"></span>        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-23796956"
+             data-product-id="23796956"
+             data-product-name="Harry Potter e a Câmara dos Segredos 20 Anos - Gryffindor"
+             data-product-position="7"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/harry-potter-e-a-camara-dos-segredos-20-anos-gryffindor-j-k-rowling/23796956">
+                
+                    <img alt="Harry Potter e a Câmara dos Segredos 20 Anos - Gryffindor" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/harry-potter-e-a-camara-dos-segredos-20-anos-gryffindor-j-k-rowling/NDV8MjM3OTY5NTZ8MTk4MTAzNjd8MTU3ODk2MDAwMDAwMA==/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Harry Potter e a Câmara dos Segredos 20 Anos - Gryffindor" data-product-id="23796956" data-price="19.90" data-brand="Editorial Presença" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="19810367" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="19810367" data-ficha="S" data-mesart="23796956" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--23796956">
+        <p>
+            <a class="title-lnk track" href="/livro/harry-potter-e-a-camara-dos-segredos-20-anos-gryffindor-j-k-rowling/23796956">Harry Potter e a Câmara dos Segredos 20 Anos - Gryffindor</a>
+        </p>
+    </div>
+
+    </div>                 <div class="authors portlet-product-author-23796956">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="publisher portlet-product-publisher-23796956">Editorial Presença</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">19,90€</span>
+                        </div>
+
+            </div>        </div>    
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-18868085"
+             data-product-id="18868085"
+             data-product-name="Harry Potter e a Câmara dos Segredos - Edição Ilustrada"
+             data-product-position="8"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/harry-potter-e-a-camara-dos-segredos-edicao-ilustrada-j-k-rowling/18868085">
+                
+                    <img alt="Harry Potter e a Câmara dos Segredos - Edição Ilustrada" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/harry-potter-e-a-camara-dos-segredos-edicao-ilustrada-j-k-rowling/NDV8MTg4NjgwODV8MTQ1OTI0MzZ8MTQ3NTUzNTYwMDAwMA==/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Harry Potter e a Câmara dos Segredos - Edição Ilustrada" data-product-id="18868085" data-price="27.50" data-brand="Editorial Presença" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="14592436" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="14592436" data-ficha="S" data-mesart="18868085" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--18868085">
+        <p>
+            <a class="title-lnk track" href="/livro/harry-potter-e-a-camara-dos-segredos-edicao-ilustrada-j-k-rowling/18868085">Harry Potter e a Câmara dos Segredos - Edição Ilustrada</a>
+        </p>
+    </div>
+
+    </div> <div class="subtitle">
+    <div class="subtitle-product portlet-product-subtitle--18868085">
+        <p>Nº. 2</p>
+    </div>
+
+</div>                 <div class="authors portlet-product-author-18868085">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="rating">
+                    <a class="title-lnk track" title="Avaliação e comentários" href="/livro/harry-potter-e-a-camara-dos-segredos-edicao-ilustrada-j-k-rowling/18868085">
+                        <div class="stars pull-left">
+                            <span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span>                        </div>
+                        <div class="comments-nr pull-left">(2)</div>
+                        <span class="clearfix"></span>
+                    </a>
+                </div>
+                            <div class="publisher portlet-product-publisher-18868085">Editorial Presença</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">27,50€</span>
+                        </div>
+
+            </div>        </div>    
+        <span class="clearfix hidden-xs"></span>        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-23796959"
+             data-product-id="23796959"
+             data-product-name="Harry Potter e a Câmara dos Segredos 20 Anos - Hufflepuff"
+             data-product-position="9"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/harry-potter-e-a-camara-dos-segredos-20-anos-hufflepuff-j-k-rowling/23796959">
+                
+                    <img alt="Harry Potter e a Câmara dos Segredos 20 Anos - Hufflepuff" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/harry-potter-e-a-camara-dos-segredos-20-anos-hufflepuff-j-k-rowling/NDV8MjM3OTY5NTl8MTk4MTAzNzB8MTU3ODk2MDAwMDAwMA==/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Harry Potter e a Câmara dos Segredos 20 Anos - Hufflepuff" data-product-id="23796959" data-price="19.90" data-brand="Editorial Presença" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="19810370" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="19810370" data-ficha="S" data-mesart="23796959" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--23796959">
+        <p>
+            <a class="title-lnk track" href="/livro/harry-potter-e-a-camara-dos-segredos-20-anos-hufflepuff-j-k-rowling/23796959">Harry Potter e a Câmara dos Segredos 20 Anos - Hufflepuff</a>
+        </p>
+    </div>
+
+    </div>                 <div class="authors portlet-product-author-23796959">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="publisher portlet-product-publisher-23796959">Editorial Presença</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">19,90€</span>
+                        </div>
+
+            </div>        </div>    
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-23796958"
+             data-product-id="23796958"
+             data-product-name="Harry Potter e a Câmara dos Segredos 20 Anos - Ravenclaw"
+             data-product-position="10"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/harry-potter-e-a-camara-dos-segredos-20-anos-ravenclaw-j-k-rowling/23796958">
+                
+                    <img alt="Harry Potter e a Câmara dos Segredos 20 Anos - Ravenclaw" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/harry-potter-e-a-camara-dos-segredos-20-anos-ravenclaw-j-k-rowling/NDV8MjM3OTY5NTh8MTk4MTAzNjl8MTU3ODk2MDAwMDAwMA==/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Harry Potter e a Câmara dos Segredos 20 Anos - Ravenclaw" data-product-id="23796958" data-price="19.90" data-brand="Editorial Presença" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="19810369" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="19810369" data-ficha="S" data-mesart="23796958" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--23796958">
+        <p>
+            <a class="title-lnk track" href="/livro/harry-potter-e-a-camara-dos-segredos-20-anos-ravenclaw-j-k-rowling/23796958">Harry Potter e a Câmara dos Segredos 20 Anos - Ravenclaw</a>
+        </p>
+    </div>
+
+    </div>                 <div class="authors portlet-product-author-23796958">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="publisher portlet-product-publisher-23796958">Editorial Presença</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">19,90€</span>
+                        </div>
+
+            </div>        </div>    
+        <span class="clearfix hidden-xs"></span>        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-23796957"
+             data-product-id="23796957"
+             data-product-name="Harry Potter e a Câmara dos Segredos 20 Anos - Slytherin"
+             data-product-position="11"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/harry-potter-e-a-camara-dos-segredos-20-anos-slytherin-j-k-rowling/23796957">
+                
+                    <img alt="Harry Potter e a Câmara dos Segredos 20 Anos - Slytherin" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/harry-potter-e-a-camara-dos-segredos-20-anos-slytherin-j-k-rowling/NDV8MjM3OTY5NTd8MTk4MTAzNjh8MTU3ODk2MDAwMDAwMA==/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Harry Potter e a Câmara dos Segredos 20 Anos - Slytherin" data-product-id="23796957" data-price="19.90" data-brand="Editorial Presença" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="19810368" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="19810368" data-ficha="S" data-mesart="23796957" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--23796957">
+        <p>
+            <a class="title-lnk track" href="/livro/harry-potter-e-a-camara-dos-segredos-20-anos-slytherin-j-k-rowling/23796957">Harry Potter e a Câmara dos Segredos 20 Anos - Slytherin</a>
+        </p>
+    </div>
+
+    </div>                 <div class="authors portlet-product-author-23796957">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="publisher portlet-product-publisher-23796957">Editorial Presença</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">19,90€</span>
+                        </div>
+
+            </div>        </div>    
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-23782758"
+             data-product-id="23782758"
+             data-product-name="Harry Potter and the Goblet of Fire - Gryffindor Edition"
+             data-product-position="12"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/harry-potter-and-the-goblet-of-fire-gryffindor-edition-j-k-rowling/23782758">
+                
+                    <img alt="Harry Potter and the Goblet of Fire - Gryffindor Edition" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/harry-potter-and-the-goblet-of-fire-gryffindor-edition-j-k-rowling/NDV8MjM3ODI3NTh8MTk3OTMwMzZ8MTU3ODAwOTYwMDAwMA==/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Harry Potter and the Goblet of Fire - Gryffindor Edition" data-product-id="23782758" data-price="10.67" data-brand="BLOOMSBURY PUBLISHING PLC" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="19793036" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="19793036" data-ficha="S" data-mesart="23782758" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--23782758">
+        <p>
+            <a class="title-lnk track" href="/livro/harry-potter-and-the-goblet-of-fire-gryffindor-edition-j-k-rowling/23782758">Harry Potter and the Goblet of Fire - Gryffindor Edition</a>
+        </p>
+    </div>
+
+    </div>                 <div class="authors portlet-product-author-23782758">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="publisher portlet-product-publisher-23782758">BLOOMSBURY PUBLISHING PLC</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">10,67€</span>
+                        </div>
+
+            </div>        </div>    
+        <span class="clearfix hidden-xs"></span>        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-23782760"
+             data-product-id="23782760"
+             data-product-name="Harry Potter and the Goblet of Fire - Ravenclaw Edition"
+             data-product-position="13"> 
+    <div class="product-img col-xs-6 col-lg-4 no-discount ">
+        <div class="cover">
+            <a class="track" href="/livro/harry-potter-and-the-goblet-of-fire-ravenclaw-edition-j-k-rowling/23782760">
+                
+                    <img alt="Harry Potter and the Goblet of Fire - Ravenclaw Edition" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/harry-potter-and-the-goblet-of-fire-ravenclaw-edition-j-k-rowling/NDV8MjM3ODI3NjB8MTk3OTMwMzh8MTU3ODAwOTYwMDAwMA==/175x&ctx=0" class="img-responsive lazy  disabled ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Harry Potter and the Goblet of Fire - Ravenclaw Edition" data-product-id="23782760" data-price="10.67" data-brand="BLOOMSBURY PUBLISHING PLC" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="19793038" class="icon-before btn add-cart  disabled " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="19793038" data-ficha="S" data-mesart="23782760" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  disabled  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--23782760">
+        <p>
+            <a class="title-lnk track" href="/livro/harry-potter-and-the-goblet-of-fire-ravenclaw-edition-j-k-rowling/23782760">Harry Potter and the Goblet of Fire - Ravenclaw Edition</a>
+        </p>
+    </div>
+
+    </div>                 <div class="authors portlet-product-author-23782760">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="publisher portlet-product-publisher-23782760">BLOOMSBURY PUBLISHING PLC</div>
+                    <div class="price">
+                                <span class="active-price">10,67€</span>
+                        </div>
+
+            </div>        </div>    
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-22237555"
+             data-product-id="22237555"
+             data-product-name="Harry Potter e a Criança Amaldiçoada"
+             data-product-position="14"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/harry-potter-e-a-crianca-amaldicoada-j-k-rowling/22237555">
+                
+                    <img alt="Harry Potter e a Criança Amaldiçoada" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/harry-potter-e-a-crianca-amaldicoada-j-k-rowling/NDV8MjIyMzc1NTV8MTgxMjM5MzN8MTUzNjEwMjAwMDAwMA==/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Harry Potter e a Criança Amaldiçoada" data-product-id="22237555" data-price="19.90" data-brand="Editorial Presença" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="18123933" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="18123933" data-ficha="S" data-mesart="22237555" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--22237555">
+        <p>
+            <a class="title-lnk track" href="/livro/harry-potter-e-a-crianca-amaldicoada-j-k-rowling/22237555">Harry Potter e a Criança Amaldiçoada</a>
+        </p>
+    </div>
+
+    </div> <div class="subtitle">
+    <div class="subtitle-product portlet-product-subtitle--22237555">
+        <p>Partes um e dois - Guião oficial da peça de teatro</p>
+    </div>
+
+</div>                 <div class="authors portlet-product-author-22237555">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>, <a href="/autor/john-tiffany/2184945">John Tiffany</a> e <a href="/autor/jack-thorne/457810">Jack Thorne</a>&nbsp;</p>
+                </div>
+                            <div class="rating">
+                    <a class="title-lnk track" title="Avaliação e comentários" href="/livro/harry-potter-e-a-crianca-amaldicoada-j-k-rowling/22237555">
+                        <div class="stars pull-left">
+                            <span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span>                        </div>
+                        <div class="comments-nr pull-left">(4)</div>
+                        <span class="clearfix"></span>
+                    </a>
+                </div>
+                            <div class="publisher portlet-product-publisher-22237555">Editorial Presença</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">19,90€</span>
+                        </div>
+
+            </div>        </div>    
+        <span class="clearfix hidden-xs"></span>        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-23782761"
+             data-product-id="23782761"
+             data-product-name="Harry Potter and the Goblet of Fire - Slytherin Edition"
+             data-product-position="15"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/harry-potter-and-the-goblet-of-fire-slytherin-edition-j-k-rowling/23782761">
+                
+                    <img alt="Harry Potter and the Goblet of Fire - Slytherin Edition" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/harry-potter-and-the-goblet-of-fire-slytherin-edition-j-k-rowling/NDV8MjM3ODI3NjF8MTk3OTMwMzl8MTU3ODAwOTYwMDAwMA==/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Harry Potter and the Goblet of Fire - Slytherin Edition" data-product-id="23782761" data-price="10.67" data-brand="BLOOMSBURY PUBLISHING PLC" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="19793039" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="19793039" data-ficha="S" data-mesart="23782761" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--23782761">
+        <p>
+            <a class="title-lnk track" href="/livro/harry-potter-and-the-goblet-of-fire-slytherin-edition-j-k-rowling/23782761">Harry Potter and the Goblet of Fire - Slytherin Edition</a>
+        </p>
+    </div>
+
+    </div>                 <div class="authors portlet-product-author-23782761">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="publisher portlet-product-publisher-23782761">BLOOMSBURY PUBLISHING PLC</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">10,67€</span>
+                        </div>
+
+            </div>        </div>    
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-21325582"
+             data-product-id="21325582"
+             data-product-name="Os Contos de Beedle, o Bardo"
+             data-product-position="16"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/os-contos-de-beedle-o-bardo-j-k-rowling/21325582">
+                
+                    <img alt="Os Contos de Beedle, o Bardo" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/os-contos-de-beedle-o-bardo-j-k-rowling/NDV8MjEzMjU1ODJ8MTcyMTM0Njd8MTUxNjE0NzIwMDAwMA==/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Os Contos de Beedle, o Bardo" data-product-id="21325582" data-price="10.90" data-brand="Editorial Presença" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="17213467" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="17213467" data-ficha="S" data-mesart="21325582" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--21325582">
+        <p>
+            <a class="title-lnk track" href="/livro/os-contos-de-beedle-o-bardo-j-k-rowling/21325582">Os Contos de Beedle, o Bardo</a>
+        </p>
+    </div>
+
+    </div>                 <div class="authors portlet-product-author-21325582">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="rating">
+                    <a class="title-lnk track" title="Avaliação e comentários" href="/livro/os-contos-de-beedle-o-bardo-j-k-rowling/21325582">
+                        <div class="stars pull-left">
+                            <span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="star"></span>                        </div>
+                        <div class="comments-nr pull-left">(2)</div>
+                        <span class="clearfix"></span>
+                    </a>
+                </div>
+                            <div class="publisher portlet-product-publisher-21325582">Editorial Presença</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">10,90€</span>
+                        </div>
+
+            </div>        </div>    
+        <span class="clearfix hidden-xs"></span>        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-23790257"
+             data-product-id="23790257"
+             data-product-name="The Hogwarts Library Boxset"
+             data-product-position="17"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/the-hogwarts-library-boxset-j-k-rowling/23790257">
+                
+                    <img alt="The Hogwarts Library Boxset" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/the-hogwarts-library-boxset-j-k-rowling/NDV8MjM3OTAyNTd8MTk4MDI0NDh8MTU3ODYxNDQwMDAwMA==/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="The Hogwarts Library Boxset" data-product-id="23790257" data-price="21.37" data-brand="BLOOMSBURY PUBLISHING PLC" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="19802448" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="19802448" data-ficha="S" data-mesart="23790257" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--23790257">
+        <p>
+            <a class="title-lnk track" href="/livro/the-hogwarts-library-boxset-j-k-rowling/23790257">The Hogwarts Library Boxset</a>
+        </p>
+    </div>
+
+    </div>                 <div class="authors portlet-product-author-23790257">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="publisher portlet-product-publisher-23790257">BLOOMSBURY PUBLISHING PLC</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">21,37€</span>
+                        </div>
+
+            </div>        </div>    
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-14307600"
+             data-product-id="14307600"
+             data-product-name="Uma Morte Súbita"
+             data-product-position="18"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/uma-morte-subita-j-k-rowling/14307600">
+                
+                    <img alt="Uma Morte Súbita" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/uma-morte-subita-j-k-rowling/NDV8MTQzMDc2MDB8OTgyNzk3N3wxMzgzNTIzMjAwMDAw/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Uma Morte Súbita" data-product-id="14307600" data-price="22.90" data-brand="Editorial Presença" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="9827977" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="9827977" data-ficha="S" data-mesart="14307600" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--14307600">
+        <p>
+            <a class="title-lnk track" href="/livro/uma-morte-subita-j-k-rowling/14307600">Uma Morte Súbita</a>
+        </p>
+    </div>
+
+    </div>                 <div class="authors portlet-product-author-14307600">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="rating">
+                    <a class="title-lnk track" title="Avaliação e comentários" href="/livro/uma-morte-subita-j-k-rowling/14307600">
+                        <div class="stars pull-left">
+                            <span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="star"></span>                        </div>
+                        <div class="comments-nr pull-left">(4)</div>
+                        <span class="clearfix"></span>
+                    </a>
+                </div>
+                            <div class="publisher portlet-product-publisher-14307600">Editorial Presença</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">22,90€</span>
+                        </div>
+
+            </div>        </div>    
+        <span class="clearfix hidden-xs"></span>        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-23414953"
+             data-product-id="23414953"
+             data-product-name="Harry Potter e o Cálice de Fogo"
+             data-product-position="19"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/harry-potter-e-o-calice-de-fogo-j-k-rowling/23414953">
+                
+                    <img alt="Harry Potter e o Cálice de Fogo" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/harry-potter-e-o-calice-de-fogo-j-k-rowling/NDV8MjM0MTQ5NTN8MTkzNzg2MDJ8MTU3MDA1NzIwMDAwMA==/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Harry Potter e o Cálice de Fogo" data-product-id="23414953" data-price="29.90" data-brand="Editorial Presença" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="19378602" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="19378602" data-ficha="S" data-mesart="23414953" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--23414953">
+        <p>
+            <a class="title-lnk track" href="/livro/harry-potter-e-o-calice-de-fogo-j-k-rowling/23414953">Harry Potter e o Cálice de Fogo</a>
+        </p>
+    </div>
+
+    </div> <div class="subtitle">
+    <div class="subtitle-product portlet-product-subtitle--23414953">
+        <p>Edição Ilustrada</p>
+    </div>
+
+</div>                 <div class="authors portlet-product-author-23414953">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="publisher portlet-product-publisher-23414953">Editorial Presença</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">29,90€</span>
+                        </div>
+
+            </div>        </div>    
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 product-portlet fp2"
+             id="search-17044490"
+             data-product-id="17044490"
+             data-product-name="Harry Potter e a Pedra Filosofal - Edição Ilustrada"
+             data-product-position="20"> 
+    <div class="product-img col-xs-6 col-lg-4 ">
+        <div class="cover">
+            <a class="track" href="/livro/harry-potter-e-a-pedra-filosofal-edicao-ilustrada-j-k-rowling/17044490">
+                
+                    <img alt="Harry Potter e a Pedra Filosofal - Edição Ilustrada" src="/img/lazy_brt.jpeg" data-src="https://img.bertrand.pt/images/harry-potter-e-a-pedra-filosofal-edicao-ilustrada-j-k-rowling/NDV8MTcwNDQ0OTB8MTI2Njg2OTN8MTQ0ODQwOTYwMDAwMA==/175x&ctx=0" class="img-responsive lazy ">
+                            </a>
+            
+                                                            <div class="buttons-actions">
+                                <button data-tipoArtigo="Livro" data-title="Harry Potter e a Pedra Filosofal - Edição Ilustrada" data-product-id="17044490" data-price="34.90" data-brand="Editorial Presença" data-epub="" data-ewook="" type="button" data-kpicesto="4" data-subart="12668693" class="icon-before btn add-cart " title="adicionar ao cesto"><span>Cesto</span></button>
+                                <button type="button" data-kpilista="11" data-subart="12668693" data-ficha="S" data-mesart="17044490" class="icon-before btn add-list" title="adicionar à lista de desejos"><span>Lista</span></button>
+                            </div>
+                    
+                            <div class="icons">
+                                            <div class="discount-percent ">
+                            <div class="round-sticker"></div>
+                            <div class="value">10%</div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+
+    
+
+    <div class="product-info  col-xs-6 col-lg-8 ">
+        <div class="title">
+    <div class="title-product portlet-product-title--17044490">
+        <p>
+            <a class="title-lnk track" href="/livro/harry-potter-e-a-pedra-filosofal-edicao-ilustrada-j-k-rowling/17044490">Harry Potter e a Pedra Filosofal - Edição Ilustrada</a>
+        </p>
+    </div>
+
+    </div> <div class="subtitle">
+    <div class="subtitle-product portlet-product-subtitle--17044490">
+        <p>Nº. 1</p>
+    </div>
+
+</div>                 <div class="authors portlet-product-author-17044490">
+                    <p>de <a href="/autor/j-k-rowling/31969">J. K. Rowling</a>&nbsp;</p>
+                </div>
+                            <div class="rating">
+                    <a class="title-lnk track" title="Avaliação e comentários" href="/livro/harry-potter-e-a-pedra-filosofal-edicao-ilustrada-j-k-rowling/17044490">
+                        <div class="stars pull-left">
+                            <span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span><span class="icon star active"></span>                        </div>
+                        <div class="comments-nr pull-left">(3)</div>
+                        <span class="clearfix"></span>
+                    </a>
+                </div>
+                            <div class="publisher portlet-product-publisher-17044490">Editorial Presença</div>
+                        <div class="shipping-discount-info">
+                                    <div class="shipping">portes grátis</div>
+                                        <div class="discount-card">
+                            10% Cartão Leitor Bertrand                        </div>
+                                </div>
+                <div class="price">
+                                <span class="active-price">34,90€</span>
+                        </div>
+
+            </div>        </div>    
+        <span class="clearfix hidden-xs"></span></div>
+
+        <div class="col-xs-12" id="loader-page">
+            <div id="search-loading-area">
+                <div class="search-loader"></div>
+                <span class="loading-more-text">A carregar resultados...</span>
+            </div>
+            <span class="load-more-text">Ver mais resultados</span>
+
+        </div>
+
+<div class="scroll-to-top hidden"></div>    <input id = "actual-page" name = "actual-page" type = "hidden" value = "1">
+
+    <!-- novos campos -->
+    <input id = "palavra" name = "palavra" type = "hidden" value = "J._K._Rowling">
+    <input id = "filterKey" name = "filterKey" type = "hidden" value = "">
+    <input id = "filterValue" name = "filterValue" type = "hidden" value = "">
+    <input id = "filterName" name = "filterName" type = "hidden" value = "">
+    <input id = "filterMap" name = "filterMap" type = "hidden" value = "">
+    <input id = "filterOperation" name = "filterOperation" type = "hidden" value = "">
+    <input id = "filterField" name = "filterField" type = "hidden" value = "">
+    <input id = "filterOrder" name = "filterOrder" type = "hidden" value = "">
+    <input id = "tab" name = "filterOrder" type = "hidden" value = "livros">
+
+    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="scroll-to-top fa fa-angle-up hidden"></div>
+            
+
+<div class = "border-footer">
+    <div class= "footer-padding">
+        
+                                <div class = "col-lg-3 col-xs-12">
+                
+                                    
+                    <div id="footerPageSM00-collapseArea" class="border-footer-smartphone hidden-lg col-xs-12 collapse-area filter collapsed border-footer-smartphone " style="cursor: pointer;" data-toggle="collapse" data-target="#footerPage-collapseSobreOptions00" aria-expanded="false" aria-controls="footerPage-collapseSobreOptions00" role="button">
+                                                    <p class=" icon footer-titles">Para sua segurança</p>
+                                            </div>
+                    
+                    <div id="footerPageLG00-collapseArea" class="hidden-xs hidden-sm hidden-md visible-lg">
+                                                    <p class="footer-titles">Para sua segurança</p>
+                                            </div>
+                    
+                    <div id="footerPage-collapseSobreOptions00" class="collapse" style="height: auto">
+                                                                                    <p class="footer-options"><a href="/sobre-nos/condicoes-de-venda/">Condições de venda</a></p>
+                                                                                                                <p class="footer-options"><a href="/sobre-nos/condicoes-de-venda/471">Compras 100% seguras </a></p>
+                                                                                                                <p class="footer-options"><a href="/sobre-nos/condicoes-de-venda/472">Política de privacidade</a></p>
+                                                                                                                <p class="footer-options"><a href="https://www.bertrand.pt/Mensagem/?key=entregas-seguras">Entregas seguras</a></p>
+                                                                        </div>
+                            </div>
+                                <div class = "col-lg-3 col-xs-12">
+                
+                                    
+                    <div id="footerPageSM10-collapseArea" class="border-footer-smartphone hidden-lg col-xs-12 collapse-area filter collapsed border-footer-smartphone " style="cursor: pointer;" data-toggle="collapse" data-target="#footerPage-collapseSobreOptions10" aria-expanded="false" aria-controls="footerPage-collapseSobreOptions10" role="button">
+                                                    <p class=" icon footer-titles">Estamos aqui para o ajudar</p>
+                                            </div>
+                    
+                    <div id="footerPageLG10-collapseArea" class="hidden-xs hidden-sm hidden-md visible-lg">
+                                                    <p class="footer-titles">Estamos aqui para o ajudar</p>
+                                            </div>
+                    
+                    <div id="footerPage-collapseSobreOptions10" class="collapse" style="height: auto">
+                                                                                    <p class="footer-options"><a href="/template/comprar-em-bertrand-online">Como comprar</a></p>
+                                                                                                                <p class="footer-options"><a href="/mapasite">Mapa do site</a></p>
+                                                                                                                <p class="footer-options"><a href="/ajuda">Ajuda</a></p>
+                                                                                                                <p class="footer-options"><a href="/contactos">Contacte-nos</a></p>
+                                                                                                                <p class="footer-options"><a href="https://www.livroreclamacoes.pt">Livro de Reclamações Eletrónico</a></p>
+                                                                        </div>
+                            </div>
+                                <div class = "col-lg-3 col-xs-12">
+                
+                                    
+                    <div id="footerPageSM20-collapseArea" class="border-footer-smartphone hidden-lg col-xs-12 collapse-area filter collapsed border-footer-smartphone " style="cursor: pointer;" data-toggle="collapse" data-target="#footerPage-collapseSobreOptions20" aria-expanded="false" aria-controls="footerPage-collapseSobreOptions20" role="button">
+                                                    <p class=" icon footer-titles">Ponto de encontro</p>
+                                            </div>
+                    
+                    <div id="footerPageLG20-collapseArea" class="hidden-xs hidden-sm hidden-md visible-lg">
+                                                    <p class="footer-titles">Ponto de encontro</p>
+                                            </div>
+                    
+                    <div id="footerPage-collapseSobreOptions20" class="collapse" style="height: auto">
+                                                                                    <p class="footer-options"><a href="https://www.bertrand.pt/template/clube-infantil">Clube Bertrand Infantil</a></p>
+                                                                                                                <p class="footer-options"><a href="https://www.bertrand.pt/blogue-somos-livros">Blogue Somos Livros</a></p>
+                                                                                                                <p class="footer-options"><a href="/eventos">Eventos</a></p>
+                                                                                                                <p class="footer-options"><a href="/areacliente/gestaosubscricoes">Receber novidades</a></p>
+                                                                                                                <p class="footer-options"><a href="https://www.facebook.com/bertrandlivreiros/">Facebook</a></p>
+                                                                                                                <p class="footer-options"><a href="https://www.instagram.com/bertrandlivreiros/">Instagram</a></p>
+                                                                        </div>
+                            </div>
+                                <div class = "col-lg-3 col-xs-12">
+                
+                                    
+                    <div id="footerPageSM30-collapseArea" class="border-footer-smartphone hidden-lg col-xs-12 collapse-area filter collapsed border-footer-smartphone " style="cursor: pointer;" data-toggle="collapse" data-target="#footerPage-collapseSobreOptions30" aria-expanded="false" aria-controls="footerPage-collapseSobreOptions30" role="button">
+                                                    <p class=" icon footer-titles">Quem somos</p>
+                                            </div>
+                    
+                    <div id="footerPageLG30-collapseArea" class="hidden-xs hidden-sm hidden-md visible-lg">
+                                                    <p class="footer-titles">Quem somos</p>
+                                            </div>
+                    
+                    <div id="footerPage-collapseSobreOptions30" class="collapse" style="height: auto">
+                                                                                    <p class="footer-options"><a href="https://www.bertrand.pt/livrarias">As nossas livrarias</a></p>
+                                                                                                                <p class="footer-options"><a href="/template/cafe-bertrand">Café Bertrand</a></p>
+                                                                                                                <p class="footer-options"><a href="http://www.grupobertrandcirculo.pt/recrutamento/">Trabalhar connosco</a></p>
+                                                                        </div>
+                            </div>
+            </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="bottom-footer copyRight-footer">
+            <span>Salvo onde se indique um período de vigência mais alargado, os preços, promoções e ofertas são válidos <br>das 00:00:00 de 05-04-2020 às 23:59:59 de 05-04-2020 e só para a livraria Bertrand online.</span> <br>
+        
+            <span>©2020 Grupo Bertrand Círculo. Todos os direitos reservados, Lisboa, Portugal</span>
+    </div>        </footer>
+    </main>
+    
+    <div class="overlay-geral-area hidden" >
+    <div class ="content">
+        <div class ="overlay-wrapper">
+                            <div class ="overlay-backgorund-color"></div>
+               
+            <div class = "overlay-content">
+                <div class="brand pull-left brand-login">
+                    <a class="navbar-brand" href="/">
+                        <img class ="brand-logo" src="/img/brand.svg" alt="Bertrand">
+                    </a>
+                </div>
+                <span >
+                    <span class='icon btn-close'></span>
+                </span>
+                <div class="overlay-middle-content">
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+<div id="cookieLawBar" style="display:none;">
+    <div class="notification">
+        <div class="messageCookie">
+            Este site utiliza <i>cookies</i> para lhe proporcionar uma melhor experiência de navegação. Ao navegar estará a consentir a sua utilização.
+            <br>
+            
+        </div>
+        <div class="buttons-container">
+            <div class="button">
+                <a href="/sobre-nos/condicoes-de-venda/" target="_self">
+                    <p>SABER MAIS</p>
+                </a>
+            </div>
+            <div class="button closeButton">
+                <p>ENTENDI</p>
+            </div>
+        </div>
+    </div>
+</div><div class="overlay-area info-checkoutexpresso-area hideOverlay" id="shoppingcart-overlay-checkoutexpresso">
+    <div class="btn-close">X</div>
+    <div class="content">        
+        <div class="form">
+            <div class="title-h1">O QUE É O CHECKOUT EXPRESSO?</div>
+
+<BR><BR>
+
+<div class="header3-h3">
+O ‘Checkout Expresso’ <b>utiliza os seus dados habituais (morada e/ou forma de envio, meio de pagamento e dados de faturação) para que a sua compra seja muito mais rápida</b>. Assim, não tem de os  indicar de cada vez que fizer uma compra.
+Em qualquer altura, pode atualizar estes dados na sua ‘Área de Cliente’. 
+<br><br>
+<b>Para que lhe sobre mais tempo para as suas leituras.</b>
+</div>
+        </div>
+    </div>
+</div><div class="overlay-geral-area hidden" id="overlayoqueprocura">
+    <div class ="content">
+        <div class ="overlay-wrapper">
+                            <div class ="overlay-backgorund-color"></div>
+               
+            <div class = "overlay-content">
+                <div class="brand pull-left brand-login">
+                    <a class="navbar-brand" href="/">
+                        <img class ="brand-logo" src="/img/brand.svg" alt="Bertrand">
+                    </a>
+                </div>
+                <span  id="overlayoqueprocura-close">
+                    <span class='icon btn-close'></span>
+                </span>
+                <div class="overlay-middle-content">
+                    
+<form action="/procuramosporsi/enviaemailprocuramos/" method="post" id="overlay-o-que-procura-form">
+    <div class="title-h1">não encontrou o que procura?</div>
+    <div class="subtitle-h2">Nós procuramos por si</div>
+    <fieldset class="hide">
+        <p>A sua identificação:</p>
+        <input id="overlay-o-que-procura-form-name" name="name" class="form-control name-box" type="text" placeholder="nome">
+        <input id="overlay-o-que-procura-form-email" name="email" class="form-control email-box" type="email" placeholder="endereço de email">
+    </fieldset>
+    <fieldset>
+        <p>Dê-nos mais informação sobre o livro que procura.</p>
+        <input id="overlay-o-que-procura-form-title" name="title" class="form-control title-box" type="text" value="" placeholder="titulo">
+        <input id="overlay-o-que-procura-form-author" name="author" class="form-control author-box" type="text" value="" placeholder="autor">
+        <input id="overlay-o-que-procura-form-isbn" name="isbn" class="form-control isbn-box" type="number" value="" placeholder="ISBN">
+        <input id="overlay-o-que-procura-form-publisher" name="publisher" class="form-control publisher-box" type="text" value="" placeholder="editor">
+        <textarea id="overlay-o-que-procura-form-comment" name="comment" class="form-control text-box" placeholder="observações"></textarea>
+    </fieldset>
+    <fieldset>
+        <button id="overlay-o-que-procura-form-checkout" class="col-xs-6 btn-checkout orange">
+            <span class="col-xs-12 description">Enviar</span>
+        </button>
+    </fieldset>
+</form>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="overlay-geral-area hidden" id="overlayoqueprocura-ret">
+    <div class ="content">
+        <div class ="overlay-wrapper">
+                            <div class ="overlay-backgorund-color"></div>
+               
+            <div class = "overlay-content">
+                <div class="brand pull-left brand-login">
+                    <a class="navbar-brand" href="/">
+                        <img class ="brand-logo" src="/img/brand.svg" alt="Bertrand">
+                    </a>
+                </div>
+                <span  id="overlayoqueprocura-ret-close">
+                    <span class='icon btn-close'></span>
+                </span>
+                <div class="overlay-middle-content">
+                    <div class="form info-pop">
+    </div>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="overlay-geral-area hidden" id="infoStockOverlay">
+    <div class ="content">
+        <div class ="overlay-wrapper">
+                            <div class ="overlay-backgorund-color"></div>
+               
+            <div class = "overlay-content">
+                <div class="brand pull-left brand-login">
+                    <a class="navbar-brand" href="/">
+                        <img class ="brand-logo" src="/img/brand.svg" alt="Bertrand">
+                    </a>
+                </div>
+                <span  id="infoStockOverlay-close">
+                    <span class='icon btn-close'></span>
+                </span>
+                <div class="overlay-middle-content">
+                    <div class="form info-pop">
+    <div class="title-h1">QUANDO VOU RECEBER A MINHA ENCOMENDA?</div><br>
+
+
+<div class="header3-h3">
+O envio da sua encomenda depende da disponibilidade do(s) artigo(s) encomendado(s).<br><br>
+Para saber o prazo que levará a receber a sua encomenda, tenha em consideração:<br> 
+» a disponibilidade mais elevada do(s) artigo(s) que está a encomendar<br>
+» o prazo de entrega definido para o tipo de envio escolhido, e<br>
+» a possibilidade de atrasos provocados por greves, tumultos e outros fatores fora do controle das empresas de transporte.
+
+<BR><BR>
+
+
+<b>EM STOCK – ENVIO EM 24 HORAS </b>
+<BR>
+A sua encomenda será processada de imediato e enviada no próprio dia, recebendo-a no dia útil seguinte, se:<br>
+» contiver apenas artigo(s) com esta indicação de disponibilidade - 'Em stock - Envio em 24h';<br>
+» for paga até às 15:00 horas do dia em que efetuou a encomenda, se for um dia útil;<br>
+» selecionar a opção de envio ‘Entrega em mão - 24h’ (Portugal Continental).<br>
+<br>
+As encomendas pagas em dia não útil, ou após as 15:00 horas (hora de Portugal Continental), apenas são enviadas no dia útil seguinte. 
+<br>
+Este prazo apenas é garantido para uma unidade de cada produto e sujeito ao stock existente no momento em que recebemos a confirmação do pagamento.
+<BR><BR>
+
+<b>ENVIO ATÉ 48 HORAS </b>
+<BR>
+Se a sua encomenda for constituída apenas por produtos com esta disponibilidade, o seu processamento e envio para o correio poderá demorar até 48 horas úteis.<br>
+
+A encomenda só entra em processamento após a receção do pagamento.<br><br>
+
+Este prazo apenas é garantido para uma unidade de cada produto e sujeito ao stock existente no momento em que recebemos a confirmação do pagamento.
+
+<BR><BR>
+
+<b>ENVIO ATÉ X DIAS</b>
+<BR>
+Esta indicação significa que, por falta de stock,  o artigo demora x dias úteis a chegar do fornecedor.
+<br>
+Estes artigos, especialmente as edições mais antigas, estão sujeitos à confirmação de preço e disponibilidade de stock no fornecedor. Poderão verificar-se atrasos ou não ser possível a satisfação da encomenda.
+
+
+<BR><BR>
+
+<b>PRÉ-LANÇAMENTO</b>
+<BR>
+O(s) artigos com esta indicação de disponibilidade só são enviados na data indicada. 
+<BR><BR>
+
+
+<b>DISPONIBILIDADE IMEDIATA</b>
+<BR>
+Este tipo de indicação é a normalmente definida para os eBooks, que, após pagamento, ficam disponíveis de imediato.
+
+<BR><BR>
+
+
+</div>
+</div>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="overlay-geral-area hidden" id="infoPortesOverlay">
+    <div class ="content">
+        <div class ="overlay-wrapper">
+                            <div class ="overlay-backgorund-color"></div>
+               
+            <div class = "overlay-content">
+                <div class="brand pull-left brand-login">
+                    <a class="navbar-brand" href="/">
+                        <img class ="brand-logo" src="/img/brand.svg" alt="Bertrand">
+                    </a>
+                </div>
+                <span  id="infoPortesOverlay-close">
+                    <span class='icon btn-close'></span>
+                </span>
+                <div class="overlay-middle-content">
+                    <div class="form info-pop">
+    <div class="title-h1">PORTES GRÁTIS</div>
+
+<div class="header3-h3">
+
+<b>- Portugal Continental:</b><br><br>
+<ul><li>Em todas as encomendas de valor igual ou superior a 15 €:<b>se escolher receber a sua encomenda numa morada à sua escolha</b>, através do modo de envio 'CTT Expresso - 24h' (pode selecionar uma janela horária ou a entrega ao sábado, o que implica o pagamento de uma taxa de serviço);</li></ul> <br>
+
+<b>- Açores e a Madeira:</b><br><br>
+
+<ul><li>Em todas as encomendas até 10 kg: se escolher <b>receber a sua encomenda numa morada à sua escolha</b>, através do modo de envio CTT Expresso Clássico – Ilhas.</li></ul> 
+
+<br>
+
+Promoção válida para encomendas de livros não escolares registadas até 31/12/2020. Descontos ou vantagens não acumuláveis com outras promoções.
+
+
+
+</div></div>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="overlay-geral-area hidden" id="infoCheckoutExpressoArea">
+    <div class ="content">
+        <div class ="overlay-wrapper">
+                            <div class ="overlay-backgorund-color"></div>
+               
+            <div class = "overlay-content">
+                <div class="brand pull-left brand-login">
+                    <a class="navbar-brand" href="/">
+                        <img class ="brand-logo" src="/img/brand.svg" alt="Bertrand">
+                    </a>
+                </div>
+                <span  id="infoCheckoutExpressoArea-close">
+                    <span class='icon btn-close'></span>
+                </span>
+                <div class="overlay-middle-content">
+                    <div class="form info-pop">
+    <div class="title-h1">O QUE É O CHECKOUT EXPRESSO?</div>
+
+<BR><BR>
+
+<div class="header3-h3">
+O ‘Checkout Expresso’ <b>utiliza os seus dados habituais (morada e/ou forma de envio, meio de pagamento e dados de faturação) para que a sua compra seja muito mais rápida</b>. Assim, não tem de os  indicar de cada vez que fizer uma compra.
+Em qualquer altura, pode atualizar estes dados na sua ‘Área de Cliente’. 
+<br><br>
+<b>Para que lhe sobre mais tempo para as suas leituras.</b>
+</div>
+</div>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div id="loading-area">
+        <div class="modal waiting loading" id="managed-dialog" tabindex="-1" role="dialog" aria-labelledby="managed-label" data-keyboard="false" data-backdrop="static" aria-hidden="true" style="display: block;">
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="close" title="close" style="display: none;">
+            </button>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="loader"></div>
+                    <div class="modal-body" id="managed-label"></div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="//cdn.bertrand.pt/build/358-vendor.min.js"></script>
+<script type="text/javascript" src="//cdn.bertrand.pt/build/358.min.js"></script>
+<script>pt.ecommerce.generic.mensagens = {"jsLoadingGenerico":"A carregar...","jsInvalidIsbnMsgGenerico":"ISBN inv\u00e1lido","jsInvalidEmailMsgGenerico":"Verifique, por favor, o endere\u00e7o  de email introduzido.","jsRequiredEmailMsgGenerico":"\u00c9 necess\u00e1rio indicar um endere\u00e7o de email.","jsInvalidDateDayMsgGenerico":"Data inv\u00e1lida","jsInvalidDateMonthMsgGenerico":"Data inv\u00e1lida","jsInvalidDateYearMsgGenerico":"Data inv\u00e1lida","jserrormessagesrequiredfield":"Campo de preenchimento obrigat\u00f3rio.","jsInvalidNifMsgGenerico":"NIF inv\u00e1lido"};pt.ecommerce.escolares.verificar = false;pt.ecommerce.escolares.verificar_anos = [1,2];pt.ecommerce.gtmhelper.searchParamTrackData = {"termo":"J+_K+_Rowling","outros":"tema%28Sem+Tema+de+Pesquisa%29%2Bramo%28%2F%29%2Bordem%28Ranking%29","query":"?termo=J _K _Rowling&outros=tema%28Sem+Tema+de+Pesquisa%29%2Bramo%28%2F%29%2Bordem%28Ranking%29"};pt.ecommerce.search.palavraPesquisada = "J._K._Rowling";pt.ecommerce.search.tabsUrl = '/pesquisacounters/livros/J+_K+_Rowling';pt.ecommerce.homepage.params = {"restricts":null,"blacklistRestricts":"8068#8069#8070#14208x14210#14208x14209","escolaresRestricts":"8070x5493","blacklistMontras":"8066#11708#14208x14210"};</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ccd6080b38","applicationID":"1204024","transactionName":"YVFXMhZZVkNVAUxYClgbdhMXTFddGzFdUBdVXBoPClxdSA==","queueTime":0,"applicationTime":255,"atts":"TRZURF5DRU0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html>

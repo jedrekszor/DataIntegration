@@ -5,16 +5,23 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>DataIntegration</groupId>
-    <artifactId>task3</artifactId>
+    <artifactId>Main</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>Task3</module>
+        <module>Task4</module>
     </modules>
     <dependencies>
         <dependency>
             <groupId>DataIntegration</groupId>
-            <artifactId>Main</artifactId>
+            <artifactId>Task3</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>DataIntegration</groupId>
+            <artifactId>Task4</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
