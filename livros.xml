@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<catalogue>
+     <book isbn="978-972-2-05418-8 ">
+          <title>Vítor Gaspar</title>
+          <author>Maria João Avillez</author>
+          <price>22.22</price>
+     </book>
+     <book isbn="978-972-6-65627-2 ">
+          <title>Sinais de Fogo</title>
+          <author>Jorge de Sena</author>
+          <price>26.35</price>
+     </book>
+     <book isbn="978-972-2-52328-8 ">
+          <title>Quando os Lobos Uivam</title>
+          <author>Aquilino Ribeiro</author>
+          <price>15.9</price>
+     </book>
+     <book isbn="23">
+          <title>Homo bimbrownikus</title>
+          <author>Andrzej Pilipiuk</author>
+          <price>25.0</price>
+     </book>
+     <book isbn="978-972-0-04645-1 ">
+          <title>O olhar de Sophie</title>
+          <author>Jojo Moyes</author>
+          <price>14.94</price>
+     </book>
+     <book isbn="978-972-2-05418-8 ">
+          <title>Vítor Gaspar</title>
+          <author>Maria João Avillez</author>
+          <price>16.11</price>
+     </book>
+     <book isbn="978-972-4-12139-0 ">
+          <title>A Trilogia de Nova Iorque</title>
+          <author>Paul Auster</author>
+          <price>13.9</price>
+     </book>
+     <book isbn="978-972-6-65627-2 ">
+          <title>Sinais de Fogo</title>
+          <author>Jorge de Sena</author>
+          <price>26.35</price>
+     </book>
+     <book isbn="978-989-2-31404-4 ">
+          <title>Palácio da Lua</title>
+          <author>Paul Auster</author>
+          <price>12.9</price>
+     </book>
+     <book isbn="978-972-2-52328-8 ">
+          <title>Quando os Lobos Uivam</title>
+          <author>Aquilino Ribeiro</author>
+          <price>15.9</price>
+     </book>
+     <book isbn="978-972-4-14634-8 ">
+          <title>As Loucuras de Brooklyn</title>
+          <author>Paul Auster</author>
+          <price>16.9</price>
+     </book>
+</catalogue>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<catalogue>
+     <book isbn="1111">
+          <title>Os maias</title>
+          <author>Eça de queiroz</author>
+          <price>15.9</price>
+     </book>
+</catalogue>
